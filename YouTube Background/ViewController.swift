@@ -6,14 +6,19 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var audio_id: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
-
-
+    
+    @IBAction func paly(_ sender: Any) {
+        audio_id.text = "";
+    }
+    
 }
 
