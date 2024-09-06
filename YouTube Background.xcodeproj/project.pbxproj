@@ -13,9 +13,38 @@
 		DAADB6212C8992E9002AAC8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAADB61F2C8992E9002AAC8E /* Main.storyboard */; };
 		DAADB6232C8992EB002AAC8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAADB6222C8992EB002AAC8E /* Assets.xcassets */; };
 		DAADB6262C8992EB002AAC8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAADB6242C8992EB002AAC8E /* LaunchScreen.storyboard */; };
+		DAADB66B2C8A710A002AAC8E /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADB66A2C8A710A002AAC8E /* ShareViewController.swift */; };
+		DAADB66E2C8A710A002AAC8E /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAADB66C2C8A710A002AAC8E /* MainInterface.storyboard */; };
+		DAADB6722C8A710A002AAC8E /* Share.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DAADB6682C8A710A002AAC8E /* Share.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		DAADB6702C8A710A002AAC8E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAADB60E2C8992E9002AAC8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAADB6672C8A710A002AAC8E;
+			remoteInfo = Share;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DAADB6732C8A710A002AAC8E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DAADB6722C8A710A002AAC8E /* Share.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		DA3A4E832C8AC24800C2F38D /* YouTube Background.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "YouTube Background.entitlements"; sourceTree = "<group>"; };
+		DA3A4E842C8ADFE100C2F38D /* Share.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Share.entitlements; sourceTree = "<group>"; };
 		DAADB6162C8992E9002AAC8E /* YouTube Background.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YouTube Background.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAADB6192C8992E9002AAC8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAADB61B2C8992E9002AAC8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,10 +53,21 @@
 		DAADB6222C8992EB002AAC8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAADB6252C8992EB002AAC8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAADB6272C8992EB002AAC8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAADB6682C8A710A002AAC8E /* Share.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Share.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAADB66A2C8A710A002AAC8E /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		DAADB66D2C8A710A002AAC8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		DAADB66F2C8A710A002AAC8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DAADB6132C8992E9002AAC8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAADB6652C8A710A002AAC8E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				DAADB6182C8992E9002AAC8E /* YouTube Background */,
+				DAADB6692C8A710A002AAC8E /* Share */,
 				DAADB6172C8992E9002AAC8E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				DAADB6162C8992E9002AAC8E /* YouTube Background.app */,
+				DAADB6682C8A710A002AAC8E /* Share.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,6 +98,7 @@
 		DAADB6182C8992E9002AAC8E /* YouTube Background */ = {
 			isa = PBXGroup;
 			children = (
+				DA3A4E832C8AC24800C2F38D /* YouTube Background.entitlements */,
 				DAADB6192C8992E9002AAC8E /* AppDelegate.swift */,
 				DAADB61B2C8992E9002AAC8E /* SceneDelegate.swift */,
 				DAADB61D2C8992E9002AAC8E /* ViewController.swift */,
@@ -65,6 +108,17 @@
 				DAADB6272C8992EB002AAC8E /* Info.plist */,
 			);
 			path = "YouTube Background";
+			sourceTree = "<group>";
+		};
+		DAADB6692C8A710A002AAC8E /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				DA3A4E842C8ADFE100C2F38D /* Share.entitlements */,
+				DAADB66A2C8A710A002AAC8E /* ShareViewController.swift */,
+				DAADB66C2C8A710A002AAC8E /* MainInterface.storyboard */,
+				DAADB66F2C8A710A002AAC8E /* Info.plist */,
+			);
+			path = Share;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,15 +131,34 @@
 				DAADB6122C8992E9002AAC8E /* Sources */,
 				DAADB6132C8992E9002AAC8E /* Frameworks */,
 				DAADB6142C8992E9002AAC8E /* Resources */,
+				DAADB6732C8A710A002AAC8E /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DAADB6712C8A710A002AAC8E /* PBXTargetDependency */,
 			);
 			name = "YouTube Background";
 			productName = "YouTube Background";
 			productReference = DAADB6162C8992E9002AAC8E /* YouTube Background.app */;
 			productType = "com.apple.product-type.application";
+		};
+		DAADB6672C8A710A002AAC8E /* Share */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAADB6762C8A710A002AAC8E /* Build configuration list for PBXNativeTarget "Share" */;
+			buildPhases = (
+				DAADB6642C8A710A002AAC8E /* Sources */,
+				DAADB6652C8A710A002AAC8E /* Frameworks */,
+				DAADB6662C8A710A002AAC8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Share;
+			productName = Share;
+			productReference = DAADB6682C8A710A002AAC8E /* Share.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +171,9 @@
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					DAADB6152C8992E9002AAC8E = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					DAADB6672C8A710A002AAC8E = {
 						CreatedOnToolsVersion = 15.2;
 					};
 				};
@@ -116,6 +192,7 @@
 			projectRoot = "";
 			targets = (
 				DAADB6152C8992E9002AAC8E /* YouTube Background */,
+				DAADB6672C8A710A002AAC8E /* Share */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +205,14 @@
 				DAADB6262C8992EB002AAC8E /* LaunchScreen.storyboard in Resources */,
 				DAADB6232C8992EB002AAC8E /* Assets.xcassets in Resources */,
 				DAADB6212C8992E9002AAC8E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAADB6662C8A710A002AAC8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAADB66E2C8A710A002AAC8E /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +229,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DAADB6642C8A710A002AAC8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAADB66B2C8A710A002AAC8E /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DAADB6712C8A710A002AAC8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAADB6672C8A710A002AAC8E /* Share */;
+			targetProxy = DAADB6702C8A710A002AAC8E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DAADB61F2C8992E9002AAC8E /* Main.storyboard */ = {
@@ -161,6 +262,14 @@
 				DAADB6252C8992EB002AAC8E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		DAADB66C2C8A710A002AAC8E /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAADB66D2C8A710A002AAC8E /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -288,8 +397,10 @@
 		DAADB62B2C8992EB002AAC8E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "YouTube Background/YouTube Background.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7DF53WA7P5;
@@ -316,8 +427,10 @@
 		DAADB62C2C8992EB002AAC8E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "YouTube Background/YouTube Background.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7DF53WA7P5;
@@ -341,6 +454,58 @@
 			};
 			name = Release;
 		};
+		DAADB6742C8A710A002AAC8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Share/Share.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7DF53WA7P5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Share/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Share;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.paul90317.YouTube-Background2.Share";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DAADB6752C8A710A002AAC8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Share/Share.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7DF53WA7P5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Share/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Share;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.paul90317.YouTube-Background2.Share";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -358,6 +523,15 @@
 			buildConfigurations = (
 				DAADB62B2C8992EB002AAC8E /* Debug */,
 				DAADB62C2C8992EB002AAC8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAADB6762C8A710A002AAC8E /* Build configuration list for PBXNativeTarget "Share" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAADB6742C8A710A002AAC8E /* Debug */,
+				DAADB6752C8A710A002AAC8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

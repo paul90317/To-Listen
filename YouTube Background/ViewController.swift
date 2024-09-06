@@ -9,9 +9,11 @@ import UIKit
 import AVKit
 
 class ViewController: UIViewController {
+    static let appGroupId = "group.com.paul90317.YouTube-Background"
     @IBOutlet weak var audio_id: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
         }catch{
@@ -40,14 +42,8 @@ class ViewController: UIViewController {
         throw URLError(.badServerResponse)
     }
     
-    @IBAction func paly(_ sender: Any) {
+    private func play(videoId : String) {
         Task {
-            guard let audioText = audio_id.text, let url = URL(string: audioText) else
-            {
-                print("unvalid URL")
-                return
-            }
-            let videoId = String(url.path.dropFirst())
             let (title, audioUrl) = try await fetchVideoInfo(id: videoId)
             guard let url = URL(string: audioUrl) else {
                 print("unvalid URL")
@@ -72,6 +68,16 @@ class ViewController: UIViewController {
                 player.play()
             }
         }
+    }
+    
+    @IBAction func play(_ sender: Any) {
+        guard let userDefaults = UserDefaults(suiteName: ViewController.appGroupId), let videoId = userDefaults.string(forKey: "videoId") else
+        {
+            print("unvalid key")
+            return
+        }
+        print(videoId)
+        play(videoId: videoId)
     }
 }
 
