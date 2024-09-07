@@ -12,6 +12,7 @@
 		DA3B5E292C8C1BC600712D69 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5E282C8C1BC600712D69 /* Item.swift */; };
 		DA3B5E2B2C8C1BC800712D69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA3B5E2A2C8C1BC800712D69 /* Assets.xcassets */; };
 		DA3B5E2E2C8C1BC800712D69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA3B5E2D2C8C1BC800712D69 /* Preview Assets.xcassets */; };
+		DA3B5E352C8C5E2100712D69 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5E342C8C5E2100712D69 /* AddItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		DA3B5E282C8C1BC600712D69 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		DA3B5E2A2C8C1BC800712D69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA3B5E2D2C8C1BC800712D69 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DA3B5E342C8C5E2100712D69 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				DA3B5E242C8C1BC600712D69 /* To_Listen_ListApp.swift */,
 				DA3B5E262C8C1BC600712D69 /* ContentView.swift */,
 				DA3B5E282C8C1BC600712D69 /* Item.swift */,
+				DA3B5E342C8C5E2100712D69 /* AddItemView.swift */,
 				DA3B5E2A2C8C1BC800712D69 /* Assets.xcassets */,
 				DA3B5E2C2C8C1BC800712D69 /* Preview Content */,
 			);
@@ -143,6 +146,7 @@
 				DA3B5E272C8C1BC600712D69 /* ContentView.swift in Sources */,
 				DA3B5E292C8C1BC600712D69 /* Item.swift in Sources */,
 				DA3B5E252C8C1BC600712D69 /* To_Listen_ListApp.swift in Sources */,
+				DA3B5E352C8C5E2100712D69 /* AddItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

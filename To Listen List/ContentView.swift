@@ -10,39 +10,41 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
-
+    @Query(sort: \Item.index) private var items: [Item]
+    @State private var addShow = false
+    
     var body: some View {
-        NavigationSplitView {
+        NavigationView {
             List {
                 ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
+                    Text(item.videoId)
                 }
                 .onDelete(perform: deleteItems)
+                .onMove(perform: move)
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     EditButton()
                 }
                 ToolbarItem {
-                    Button(action: addItem) {
+                    Button(action: {addShow.toggle()}) {
                         Label("Add Item", systemImage: "plus")
                     }
                 }
             }
-        } detail: {
-            Text("Select an item")
+            .sheet(isPresented: $addShow, content: {
+                NavigationStack {
+                    AddItemView()
+                }
+            })
         }
     }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
+    
+    private func move(from source: IndexSet, to destination: Int) {
+        var reorderedItems = items
+        reorderedItems.move(fromOffsets: source, toOffset: destination)
+        for (i,item) in reorderedItems.enumerated() {
+            item.index = i;
         }
     }
 
