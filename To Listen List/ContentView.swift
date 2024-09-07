@@ -12,12 +12,15 @@ struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @Query(sort: \Item.index) private var items: [Item]
     @State private var addShow = false
-    
     var body: some View {
         NavigationView {
             List {
                 ForEach(items) { item in
-                    Text(item.videoId)
+                    NavigationLink {
+                        CDPlayer(videoId: item.videoId)
+                    } label: {
+                        Text(item.videoId)
+                    }
                 }
                 .onDelete(perform: deleteItems)
                 .onMove(perform: move)
@@ -33,9 +36,8 @@ struct ContentView: View {
                 }
             }
             .sheet(isPresented: $addShow, content: {
-                NavigationStack {
-                    AddItemView()
-                }
+                AddItemView()
+                    .presentationDetents([.medium])
             })
         }
     }

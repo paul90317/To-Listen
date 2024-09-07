@@ -13,6 +13,7 @@
 		DA3B5E2B2C8C1BC800712D69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA3B5E2A2C8C1BC800712D69 /* Assets.xcassets */; };
 		DA3B5E2E2C8C1BC800712D69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA3B5E2D2C8C1BC800712D69 /* Preview Assets.xcassets */; };
 		DA3B5E352C8C5E2100712D69 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5E342C8C5E2100712D69 /* AddItemView.swift */; };
+		DA3B5E372C8C6DC600712D69 /* CDPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5E362C8C6DC600712D69 /* CDPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,8 @@
 		DA3B5E2A2C8C1BC800712D69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA3B5E2D2C8C1BC800712D69 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DA3B5E342C8C5E2100712D69 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
+		DA3B5E362C8C6DC600712D69 /* CDPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDPlayer.swift; sourceTree = "<group>"; };
+		DA3B5E382C8C77E900712D69 /* To-Listen-List-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "To-Listen-List-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,10 +58,12 @@
 		DA3B5E232C8C1BC600712D69 /* To Listen List */ = {
 			isa = PBXGroup;
 			children = (
+				DA3B5E382C8C77E900712D69 /* To-Listen-List-Info.plist */,
 				DA3B5E242C8C1BC600712D69 /* To_Listen_ListApp.swift */,
 				DA3B5E262C8C1BC600712D69 /* ContentView.swift */,
 				DA3B5E282C8C1BC600712D69 /* Item.swift */,
 				DA3B5E342C8C5E2100712D69 /* AddItemView.swift */,
+				DA3B5E362C8C6DC600712D69 /* CDPlayer.swift */,
 				DA3B5E2A2C8C1BC800712D69 /* Assets.xcassets */,
 				DA3B5E2C2C8C1BC800712D69 /* Preview Content */,
 			);
@@ -144,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA3B5E272C8C1BC600712D69 /* ContentView.swift in Sources */,
+				DA3B5E372C8C6DC600712D69 /* CDPlayer.swift in Sources */,
 				DA3B5E292C8C1BC600712D69 /* Item.swift in Sources */,
 				DA3B5E252C8C1BC600712D69 /* To_Listen_ListApp.swift in Sources */,
 				DA3B5E352C8C5E2100712D69 /* AddItemView.swift in Sources */,
@@ -283,6 +289,7 @@
 				DEVELOPMENT_TEAM = 7DF53WA7P5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "To-Listen-List-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -312,6 +319,7 @@
 				DEVELOPMENT_TEAM = 7DF53WA7P5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "To-Listen-List-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
