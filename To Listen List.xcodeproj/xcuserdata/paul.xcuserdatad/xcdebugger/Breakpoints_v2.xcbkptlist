@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "B96ED8ED-2B5D-4FF5-B713-83EA59AB6B22"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EC5DADCB-1753-49FE-AA0D-DF2AE455E883"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "To Listen List/CDPlayer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "58CD120E-66C5-448A-8D78-176F5A720763"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "To Listen List/CDPlayer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3C1AB834-E5A8-4165-8DB2-99326A8CCB6B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "To Listen List/CDPlayer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "fetchVideoInfo(videoId:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3C1AB834-E5A8-4165-8DB2-99326A8CCB6B - e0dc851120251865"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for To_Listen_List.CDPlayer.fetchVideoInfo() async throws -&gt; (title: Swift.String, audioUrl: Swift.String)"
+                  moduleName = "To Listen List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paul/Desktop/To%20Listen%20List/To%20Listen%20List/CDPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "1612">
+               </Location>
+               <Location
+                  uuid = "3C1AB834-E5A8-4165-8DB2-99326A8CCB6B - e0dc851120251865"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for To_Listen_List.CDPlayer.fetchVideoInfo() async throws -&gt; (title: Swift.String, audioUrl: Swift.String)"
+                  moduleName = "To Listen List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paul/Desktop/To%20Listen%20List/To%20Listen%20List/CDPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "1252">
+               </Location>
+               <Location
+                  uuid = "3C1AB834-E5A8-4165-8DB2-99326A8CCB6B - e0dc851120251865"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for To_Listen_List.CDPlayer.fetchVideoInfo() async throws -&gt; (title: Swift.String, audioUrl: Swift.String)"
+                  moduleName = "To Listen List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paul/Desktop/To%20Listen%20List/To%20Listen%20List/CDPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "1224">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F332AE00-09B8-4BC2-8E34-8EB33A65F4A3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "To Listen List/CDPlayer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "fetchVideoInfo(videoId:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F332AE00-09B8-4BC2-8E34-8EB33A65F4A3 - e0dc851120251802"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for To_Listen_List.CDPlayer.fetchVideoInfo() async throws -&gt; (title: Swift.String, audioUrl: Swift.String)"
+                  moduleName = "To Listen List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paul/Desktop/To%20Listen%20List/To%20Listen%20List/CDPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "2804">
+               </Location>
+               <Location
+                  uuid = "F332AE00-09B8-4BC2-8E34-8EB33A65F4A3 - e0dc851120251802"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for To_Listen_List.CDPlayer.fetchVideoInfo() async throws -&gt; (title: Swift.String, audioUrl: Swift.String)"
+                  moduleName = "To Listen List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paul/Desktop/To%20Listen%20List/To%20Listen%20List/CDPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "2384">
+               </Location>
+               <Location
+                  uuid = "F332AE00-09B8-4BC2-8E34-8EB33A65F4A3 - e0dc851120251802"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for To_Listen_List.CDPlayer.fetchVideoInfo() async throws -&gt; (title: Swift.String, audioUrl: Swift.String)"
+                  moduleName = "To Listen List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paul/Desktop/To%20Listen%20List/To%20Listen%20List/CDPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "2356">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "476BA956-ABA5-424E-A824-A1B4AF5AD5FA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "To Listen List/CDPlayer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "fetchVideoInfo(videoId:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "476BA956-ABA5-424E-A824-A1B4AF5AD5FA - e0dc8511202519e1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for To_Listen_List.CDPlayer.fetchVideoInfo() async throws -&gt; (title: Swift.String, audioUrl: Swift.String)"
+                  moduleName = "To Listen List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paul/Desktop/To%20Listen%20List/To%20Listen%20List/CDPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "3028">
+               </Location>
+               <Location
+                  uuid = "476BA956-ABA5-424E-A824-A1B4AF5AD5FA - e0dc8511202519e1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for To_Listen_List.CDPlayer.fetchVideoInfo() async throws -&gt; (title: Swift.String, audioUrl: Swift.String)"
+                  moduleName = "To Listen List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paul/Desktop/To%20Listen%20List/To%20Listen%20List/CDPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "2804">
+               </Location>
+               <Location
+                  uuid = "476BA956-ABA5-424E-A824-A1B4AF5AD5FA - e0dc8511202519e1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for To_Listen_List.CDPlayer.fetchVideoInfo() async throws -&gt; (title: Swift.String, audioUrl: Swift.String)"
+                  moduleName = "To Listen List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paul/Desktop/To%20Listen%20List/To%20Listen%20List/CDPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "2776">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CEAE1B35-A4C2-4F9D-B878-425511321850"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "To Listen List/CDPlayer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "fetchVideoInfo(videoId:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CEAE1B35-A4C2-4F9D-B878-425511321850 - e0dc8511202519c0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for To_Listen_List.CDPlayer.fetchVideoInfo() async throws -&gt; (title: Swift.String, audioUrl: Swift.String)"
+                  moduleName = "To Listen List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paul/Desktop/To%20Listen%20List/To%20Listen%20List/CDPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "3624">
+               </Location>
+               <Location
+                  uuid = "CEAE1B35-A4C2-4F9D-B878-425511321850 - e0dc8511202519c0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for To_Listen_List.CDPlayer.fetchVideoInfo() async throws -&gt; (title: Swift.String, audioUrl: Swift.String)"
+                  moduleName = "To Listen List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paul/Desktop/To%20Listen%20List/To%20Listen%20List/CDPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "3028">
+               </Location>
+               <Location
+                  uuid = "CEAE1B35-A4C2-4F9D-B878-425511321850 - e0dc8511202519c0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for To_Listen_List.CDPlayer.fetchVideoInfo() async throws -&gt; (title: Swift.String, audioUrl: Swift.String)"
+                  moduleName = "To Listen List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paul/Desktop/To%20Listen%20List/To%20Listen%20List/CDPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "3000">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DF62BB5A-19AB-459E-A991-0BE7FB93542A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "To Listen List/CDPlayer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "fetchVideoInfo(videoId:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DF62BB5A-19AB-459E-A991-0BE7FB93542A - e0dc851120251886"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for To_Listen_List.CDPlayer.fetchVideoInfo() async throws -&gt; (title: Swift.String, audioUrl: Swift.String)"
+                  moduleName = "To Listen List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paul/Desktop/To%20Listen%20List/To%20Listen%20List/CDPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "1252">
+               </Location>
+               <Location
+                  uuid = "DF62BB5A-19AB-459E-A991-0BE7FB93542A - e0dc851120251886"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for To_Listen_List.CDPlayer.fetchVideoInfo() async throws -&gt; (title: Swift.String, audioUrl: Swift.String)"
+                  moduleName = "To Listen List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paul/Desktop/To%20Listen%20List/To%20Listen%20List/CDPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "820">
+               </Location>
+               <Location
+                  uuid = "DF62BB5A-19AB-459E-A991-0BE7FB93542A - e0dc851120251886"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for To_Listen_List.CDPlayer.fetchVideoInfo() async throws -&gt; (title: Swift.String, audioUrl: Swift.String)"
+                  moduleName = "To Listen List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paul/Desktop/To%20Listen%20List/To%20Listen%20List/CDPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "792">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "17901C85-70A6-4205-BEBE-14ADD7D771DB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "To Listen List/CDPlayer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "fetchVideoInfo(videoId:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "17901C85-70A6-4205-BEBE-14ADD7D771DB - e0dc85112025198e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for To_Listen_List.CDPlayer.fetchVideoInfo() async throws -&gt; (title: Swift.String, audioUrl: Swift.String)"
+                  moduleName = "To Listen List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paul/Desktop/To%20Listen%20List/To%20Listen%20List/CDPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "4272">
+               </Location>
+               <Location
+                  uuid = "17901C85-70A6-4205-BEBE-14ADD7D771DB - e0dc85112025198e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for To_Listen_List.CDPlayer.fetchVideoInfo() async throws -&gt; (title: Swift.String, audioUrl: Swift.String)"
+                  moduleName = "To Listen List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paul/Desktop/To%20Listen%20List/To%20Listen%20List/CDPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "3764">
+               </Location>
+               <Location
+                  uuid = "17901C85-70A6-4205-BEBE-14ADD7D771DB - e0dc85112025198e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for To_Listen_List.CDPlayer.fetchVideoInfo() async throws -&gt; (title: Swift.String, audioUrl: Swift.String)"
+                  moduleName = "To Listen List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paul/Desktop/To%20Listen%20List/To%20Listen%20List/CDPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "3752">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "96F23355-84C2-459F-85D9-A3C51DF9C7D0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "To Listen List/CDPlayer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "fetchVideoInfo(videoId:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "96F23355-84C2-459F-85D9-A3C51DF9C7D0 - e0dc85112025192b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for To_Listen_List.CDPlayer.fetchVideoInfo() async throws -&gt; (title: Swift.String, audioUrl: Swift.String)"
+                  moduleName = "To Listen List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paul/Desktop/To%20Listen%20List/To%20Listen%20List/CDPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "4736">
+               </Location>
+               <Location
+                  uuid = "96F23355-84C2-459F-85D9-A3C51DF9C7D0 - e0dc85112025190a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for To_Listen_List.CDPlayer.fetchVideoInfo() async throws -&gt; (title: Swift.String, audioUrl: Swift.String)"
+                  moduleName = "To Listen List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paul/Desktop/To%20Listen%20List/To%20Listen%20List/CDPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "4736">
+               </Location>
+               <Location
+                  uuid = "96F23355-84C2-459F-85D9-A3C51DF9C7D0 - e0dc85112025190a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for To_Listen_List.CDPlayer.fetchVideoInfo() async throws -&gt; (title: Swift.String, audioUrl: Swift.String)"
+                  moduleName = "To Listen List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paul/Desktop/To%20Listen%20List/To%20Listen%20List/CDPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "4720">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "305E25C3-A4CB-4582-9A9C-6B5DC624B152"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "To Listen List/CDPlayer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "fetchVideoInfo(videoId:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "305E25C3-A4CB-4582-9A9C-6B5DC624B152 - e0dc85112025190a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for To_Listen_List.CDPlayer.fetchVideoInfo() async throws -&gt; (title: Swift.String, audioUrl: Swift.String)"
+                  moduleName = "To Listen List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paul/Desktop/To%20Listen%20List/To%20Listen%20List/CDPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "5196">
+               </Location>
+               <Location
+                  uuid = "305E25C3-A4CB-4582-9A9C-6B5DC624B152 - e0dc85112025190a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for To_Listen_List.CDPlayer.fetchVideoInfo() async throws -&gt; (title: Swift.String, audioUrl: Swift.String)"
+                  moduleName = "To Listen List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paul/Desktop/To%20Listen%20List/To%20Listen%20List/CDPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "4736">
+               </Location>
+               <Location
+                  uuid = "305E25C3-A4CB-4582-9A9C-6B5DC624B152 - e0dc85112025190a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for To_Listen_List.CDPlayer.fetchVideoInfo() async throws -&gt; (title: Swift.String, audioUrl: Swift.String)"
+                  moduleName = "To Listen List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paul/Desktop/To%20Listen%20List/To%20Listen%20List/CDPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "4720">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "22473F88-30A5-4DF1-AAC2-A0AC3F4EA358"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "To Listen List/CDPlayer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "fetchVideoInfo(videoId:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "22473F88-30A5-4DF1-AAC2-A0AC3F4EA358 - e0dc85112025e6e9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for To_Listen_List.CDPlayer.fetchVideoInfo() async throws -&gt; (title: Swift.String, audioUrl: Swift.String)"
+                  moduleName = "To Listen List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paul/Desktop/To%20Listen%20List/To%20Listen%20List/CDPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "5644">
+               </Location>
+               <Location
+                  uuid = "22473F88-30A5-4DF1-AAC2-A0AC3F4EA358 - af746cbba4b040ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for To_Listen_List.CDPlayer.fetchVideoInfo() async throws -&gt; (title: Swift.String, audioUrl: Swift.String)"
+                  moduleName = "To Listen List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paul/Desktop/To%20Listen%20List/To%20Listen%20List/CDPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "280">
+               </Location>
+               <Location
+                  uuid = "22473F88-30A5-4DF1-AAC2-A0AC3F4EA358 - e0dc85112025e6e9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for To_Listen_List.CDPlayer.fetchVideoInfo() async throws -&gt; (title: Swift.String, audioUrl: Swift.String)"
+                  moduleName = "To Listen List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paul/Desktop/To%20Listen%20List/To%20Listen%20List/CDPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "5196">
+               </Location>
+               <Location
+                  uuid = "22473F88-30A5-4DF1-AAC2-A0AC3F4EA358 - e0dc85112025e6e9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for To_Listen_List.CDPlayer.fetchVideoInfo() async throws -&gt; (title: Swift.String, audioUrl: Swift.String)"
+                  moduleName = "To Listen List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paul/Desktop/To%20Listen%20List/To%20Listen%20List/CDPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "5180">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "810F6FB3-F454-49A3-B0CD-64818BBA2017"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "To Listen List/CDPlayer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "fetchVideoInfo(videoId:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "810F6FB3-F454-49A3-B0CD-64818BBA2017 - 3fafa411142caa52"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "To_Listen_List.CDPlayer.downloadImage() async throws -&gt; Foundation.Data"
+                  moduleName = "To Listen List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paul/Desktop/To%20Listen%20List/To%20Listen%20List/CDPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "320">
+               </Location>
+               <Location
+                  uuid = "810F6FB3-F454-49A3-B0CD-64818BBA2017 - 7699b0349ba6273c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for To_Listen_List.CDPlayer.downloadImage() async throws -&gt; Foundation.Data"
+                  moduleName = "To Listen List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paul/Desktop/To%20Listen%20List/To%20Listen%20List/CDPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "810F6FB3-F454-49A3-B0CD-64818BBA2017 - e0dc85112025e6c8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for To_Listen_List.CDPlayer.fetchVideoInfo() async throws -&gt; (title: Swift.String, audioUrl: Swift.String)"
+                  moduleName = "To Listen List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paul/Desktop/To%20Listen%20List/To%20Listen%20List/CDPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "5644">
+               </Location>
+               <Location
+                  uuid = "810F6FB3-F454-49A3-B0CD-64818BBA2017 - af746cbba4b040cf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for To_Listen_List.CDPlayer.fetchVideoInfo() async throws -&gt; (title: Swift.String, audioUrl: Swift.String)"
+                  moduleName = "To Listen List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paul/Desktop/To%20Listen%20List/To%20Listen%20List/CDPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "280">
+               </Location>
+               <Location
+                  uuid = "810F6FB3-F454-49A3-B0CD-64818BBA2017 - af746cbba4b040cf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for To_Listen_List.CDPlayer.fetchVideoInfo() async throws -&gt; (title: Swift.String, audioUrl: Swift.String)"
+                  moduleName = "To Listen List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paul/Desktop/To%20Listen%20List/To%20Listen%20List/CDPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "296">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "066910D3-51CD-434C-A1C1-906215992D6C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "To Listen List/CDPlayer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "fetchVideoInfo(videoId:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

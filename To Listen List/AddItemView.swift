@@ -34,16 +34,33 @@ struct AddItemView: View {
         }
     }
     
-    private func addItem(videoId: String) {
-        withAnimation {
-            if let last = items.last {
-                let newItem = Item(index: last.index + 1, videoId: videoId)
-                modelContext.insert(newItem)
-            } else {
-                let newItem = Item(index: 0, videoId: videoId)
-                modelContext.insert(newItem)
-            }
+    private func downloadImage(videoId: String) async throws -> Data {
+        let link = "https://i.ytimg.com/vi/\(videoId)/mqdefault.jpg"
+        guard let url = URL(string: link) else {
+            throw URLError(.badServerResponse)
         }
+        let (data, _) = try await URLSession.shared.data(from: url)
+        return data
+    }
+    
+    private func addItem(videoId: String) {
+        Task {
+            if let last = items.last {
+                let image = try await downloadImage(videoId: videoId)
+                let newItem = Item(index: last.index + 1, videoId: videoId, title: videoId, image: image)
+                withAnimation {
+                    modelContext.insert(newItem)
+                }
+            } else {
+                let image = try await downloadImage(videoId: videoId)
+                let newItem = Item(index: 0, videoId: videoId, title: videoId, image: image)
+                withAnimation {
+                    modelContext.insert(newItem)
+                }
+            }
+            
+        }
+        
     }
     
     private func addItem() {

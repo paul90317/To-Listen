@@ -15,11 +15,11 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(items) { item in
+                ForEach(Array(items.enumerated()), id:\.offset) { index, item in
                     NavigationLink {
-                        CDPlayer(videoId: item.videoId)
+                        CDPlayer(audio_id: index)
                     } label: {
-                        Text(item.videoId)
+                        Text(item.title)
                     }
                 }
                 .onDelete(perform: deleteItems)
@@ -59,7 +59,7 @@ struct ContentView: View {
     }
 }
 
-#Preview {
+/* #Preview {
     ContentView()
         .modelContainer(for: Item.self, inMemory: true)
-}
+}*/

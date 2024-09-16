@@ -12,8 +12,12 @@ import SwiftData
 final class Item {
     var index: Int
     var videoId: String
-    init(index : Int, videoId : String) {
+    var title: String
+    var image: Data
+    init(index: Int, videoId: String, title: String, image: Data) {
         self.index = index
         self.videoId = videoId
+        self.title = title
+        self.image = image
     }
 }
