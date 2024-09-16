@@ -13,6 +13,7 @@ final class Item {
     var index: Int
     var videoId: String
     var title: String
+    var streamURL: String?
     var image: Data
     init(index: Int, videoId: String, title: String, image: Data) {
         self.index = index

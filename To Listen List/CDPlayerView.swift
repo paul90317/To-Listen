@@ -11,10 +11,10 @@ import SwiftData
 
 struct CDPlayer: View {
     @Query(sort: \Item.index) private var items: [Item]
-    private let first_audio_id: Int
     @State private var current_audio_id :Int = 0
     @State private var notificationHandlers: [NSObjectProtocol] = []
-    private var player = AVPlayer()
+    @State private var player = AVPlayer()
+    private let first_audio_id: Int
     static let resetPlayerEvent = Notification.Name("resetPlayerEvent")
     init (audio_id: Int) {
         try! AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
@@ -82,13 +82,28 @@ struct CDPlayer: View {
     }
     
     private func getAVPlayerItem(item: Item) async throws -> AVPlayerItem {
-        let audioUrl = try await fetchStreamURL(videoId: item.videoId)
-        guard let url = URL(string: audioUrl) else {
-            throw URLError(.badServerResponse)
+        let asset :AVAsset!
+        let duration :Double
+        if let streamURL = item.streamURL, let url = URL(string: streamURL) {
+            let temp = AVAsset(url: url)
+            do{
+                duration = CMTimeGetSeconds(try await temp.load(.duration)) / 2
+                asset = temp
+                print("load success")
+            } catch {
+                let streamURL = try await fetchStreamURL(videoId: item.videoId)
+                let url = URL(string: streamURL)!
+                asset = AVAsset(url: url)
+                duration = CMTimeGetSeconds(try await asset.load(.duration)) / 2
+                item.streamURL = streamURL
+            }
+        } else {
+            let streamURL = try await fetchStreamURL(videoId: item.videoId)
+            let url = URL(string: streamURL)!
+            asset = AVAsset(url: url)
+            duration = CMTimeGetSeconds(try await asset.load(.duration)) / 2
+            item.streamURL = streamURL
         }
-        //print(audioUrl)
-        let asset = AVAsset(url: url)
-        let duration = CMTimeGetSeconds(try await asset.load(.duration)) / 2
         
         // 创建播放器
         let playerItem = AVPlayerItem(asset: asset)
