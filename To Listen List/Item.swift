@@ -15,10 +15,12 @@ final class Item {
     var title: String
     var streamURL: String?
     var image: Data
-    init(index: Int, videoId: String, title: String, image: Data) {
+    var artist: String
+    init(index: Int, videoId: String, title: String, image: Data, author: String) {
         self.index = index
         self.videoId = videoId
         self.title = title
         self.image = image
+        self.artist = author
     }
 }

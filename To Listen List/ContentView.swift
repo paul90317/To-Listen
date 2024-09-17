@@ -19,7 +19,27 @@ struct ContentView: View {
                     NavigationLink {
                         CDPlayer(audio_id: index)
                     } label: {
-                        Text(item.title)
+                        HStack {
+                            if let image = UIImage(data: item.image) {
+                                Image(uiImage: image)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 80, height: 45)
+                            }
+                            
+                            
+                            VStack(alignment: .leading) {
+                                Text(item.title)
+                                    .font(.headline)
+                                    .lineLimit(2)
+                                    .truncationMode(.tail)
+                                Text(item.artist)
+                                    .font(.subheadline)
+                                    .foregroundColor(.secondary)
+                                    .lineLimit(1)
+                                    .truncationMode(.tail)
+                            }
+                        }
                     }
                 }
                 .onDelete(perform: deleteItems)
