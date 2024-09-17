@@ -8,7 +8,7 @@
 import AVKit
 import Kanna
 
-private func fetchStreamURL(videoId: String) async throws -> String {
+func fetchStreamURL(videoId: String) async throws -> String {
     guard let url = URL(string: "https://downloader.freemake.com/api/videoinfo/\(videoId)") else {
         throw URLError(.badURL)
     }
@@ -92,53 +92,4 @@ func fetchAuthor(videoId: String) async throws -> String {
     }
     
     return author
-}
-
-func getAVPlayerItem(item: Item) async throws -> AVPlayerItem {
-    let asset :AVAsset!
-    let duration :Double
-    if let streamURL = item.streamURL, let url = URL(string: streamURL) {
-        let temp = AVAsset(url: url)
-        do{
-            duration = CMTimeGetSeconds(try await temp.load(.duration)) / 2
-            asset = temp
-            print("load success")
-        } catch {
-            let streamURL = try await fetchStreamURL(videoId: item.videoId)
-            guard let url = URL(string: streamURL) else {
-                throw URLError(.badURL)
-            }
-            asset = AVAsset(url: url)
-            duration = CMTimeGetSeconds(try await asset.load(.duration)) / 2
-            item.streamURL = streamURL
-        }
-    } else {
-        let streamURL = try await fetchStreamURL(videoId: item.videoId)
-        guard let url = URL(string: streamURL) else {
-            throw URLError(.badURL)
-        }
-        asset = AVAsset(url: url)
-        duration = CMTimeGetSeconds(try await asset.load(.duration)) / 2
-        item.streamURL = streamURL
-    }
-    
-    // 创建播放器
-    let playerItem = AVPlayerItem(asset: asset)
-    playerItem.forwardPlaybackEndTime = CMTime(seconds: duration, preferredTimescale: 600)
-    
-    // Set title
-    let titleMetadata = AVMutableMetadataItem()
-    titleMetadata.key = AVMetadataKey.commonKeyTitle as NSString
-    titleMetadata.keySpace = .common
-    titleMetadata.value = item.title as NSString
-    
-    // Set artwork
-    let artworkMetadata = AVMutableMetadataItem()
-    artworkMetadata.key = AVMetadataKey.commonKeyArtwork as NSString
-    artworkMetadata.keySpace = .common
-    artworkMetadata.value = item.image as NSData
-    
-    playerItem.externalMetadata = [titleMetadata, artworkMetadata]
-    
-    return playerItem
 }

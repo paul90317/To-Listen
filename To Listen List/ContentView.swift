@@ -10,7 +10,7 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query(sort: \Item.index) private var items: [Item]
+    @Query(sort: \Item.order) private var items: [Item]
     @State private var addShow = false
     var body: some View {
         NavigationView {
@@ -43,7 +43,7 @@ struct ContentView: View {
                     }
                 }
                 .onDelete(perform: deleteItems)
-                .onMove(perform: move)
+                .onMove(perform: moveItems)
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -62,12 +62,15 @@ struct ContentView: View {
         }
     }
     
-    private func move(from source: IndexSet, to destination: Int) {
-        var reorderedItems = items
-        reorderedItems.move(fromOffsets: source, toOffset: destination)
-        for (i,item) in reorderedItems.enumerated() {
-            item.index = i;
+    private func moveItems(from source: IndexSet, to destination: Int) {
+        withAnimation {
+            var reorderedItems = items
+            reorderedItems.move(fromOffsets: source, toOffset: destination)
+            for (i,item) in reorderedItems.enumerated() {
+                item.order = i;
+            }
         }
+        
     }
 
     private func deleteItems(offsets: IndexSet) {

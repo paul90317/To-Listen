@@ -10,14 +10,14 @@ import SwiftData
 
 @Model
 final class Item {
-    var index: Int
+    var order: Int
     var videoId: String
     var title: String
     var streamURL: String?
     var image: Data
     var artist: String
-    init(index: Int, videoId: String, title: String, image: Data, author: String) {
-        self.index = index
+    init(order: Int, videoId: String, title: String, image: Data, author: String) {
+        self.order = order
         self.videoId = videoId
         self.title = title
         self.image = image

@@ -11,7 +11,7 @@ import SwiftData
 struct AddItemView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
-    @Query(sort: \Item.index) private var items: [Item]
+    @Query(sort: \Item.order) private var items: [Item]
     @State var link = ""
     @State private var notificationHandlers: [NSObjectProtocol] = []
     static let addItemEvent = Notification.Name("addItemEvent")
@@ -52,10 +52,10 @@ struct AddItemView: View {
                     let image = notification.userInfo!["image"] as! Data
                     let author = notification.userInfo!["author"] as! String
                     if let last = items.last {
-                        let newItem = Item(index: last.index + 1, videoId: videoId, title: title, image: image, author: author)
+                        let newItem = Item(order: last.order + 1, videoId: videoId, title: title, image: image, author: author)
                         modelContext.insert(newItem)
                     } else {
-                        let newItem = Item(index: 0, videoId: videoId, title: title, image: image, author: author)
+                        let newItem = Item(order: 0, videoId: videoId, title: title, image: image, author: author)
                         modelContext.insert(newItem)
                     }
                     dismiss()
