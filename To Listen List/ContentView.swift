@@ -17,7 +17,7 @@ struct ContentView: View {
             List {
                 ForEach(Array(items.enumerated()), id:\.offset) { index, item in
                     NavigationLink {
-                        CDPlayer(audio_id: index)
+                        MusicPlayer(trackId: index)
                     } label: {
                         HStack {
                             if let image = UIImage(data: item.image) {

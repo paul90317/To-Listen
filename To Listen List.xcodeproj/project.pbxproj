@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA35A22B2C9BA2C800AD2456 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA35A22A2C9BA2C800AD2456 /* MusicPlayer.swift */; };
 		DA3B5E252C8C1BC600712D69 /* To_Listen_ListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5E242C8C1BC600712D69 /* To_Listen_ListApp.swift */; };
 		DA3B5E272C8C1BC600712D69 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5E262C8C1BC600712D69 /* ContentView.swift */; };
 		DA3B5E292C8C1BC600712D69 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5E282C8C1BC600712D69 /* Item.swift */; };
 		DA3B5E2B2C8C1BC800712D69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA3B5E2A2C8C1BC800712D69 /* Assets.xcassets */; };
 		DA3B5E2E2C8C1BC800712D69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA3B5E2D2C8C1BC800712D69 /* Preview Assets.xcassets */; };
 		DA3B5E352C8C5E2100712D69 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5E342C8C5E2100712D69 /* AddItemView.swift */; };
-		DA3B5E372C8C6DC600712D69 /* CDPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5E362C8C6DC600712D69 /* CDPlayerView.swift */; };
 		DAEDC3242C989FA100D39AA2 /* Scraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEDC3232C989FA100D39AA2 /* Scraper.swift */; };
-		DAEDC32A2C98B11200D39AA2 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = DAEDC3292C98B11200D39AA2 /* SwiftSoup */; };
 		DAEDC32D2C9911F900D39AA2 /* Kanna in Frameworks */ = {isa = PBXBuildFile; productRef = DAEDC32C2C9911F900D39AA2 /* Kanna */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA35A22A2C9BA2C800AD2456 /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		DA3B5E212C8C1BC600712D69 /* To Listen List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To Listen List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3B5E242C8C1BC600712D69 /* To_Listen_ListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = To_Listen_ListApp.swift; sourceTree = "<group>"; };
 		DA3B5E262C8C1BC600712D69 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -27,7 +27,6 @@
 		DA3B5E2A2C8C1BC800712D69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA3B5E2D2C8C1BC800712D69 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DA3B5E342C8C5E2100712D69 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
-		DA3B5E362C8C6DC600712D69 /* CDPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDPlayerView.swift; sourceTree = "<group>"; };
 		DA3B5E382C8C77E900712D69 /* To-Listen-List-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "To-Listen-List-Info.plist"; sourceTree = SOURCE_ROOT; };
 		DAEDC3232C989FA100D39AA2 /* Scraper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scraper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -38,7 +37,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAEDC32D2C9911F900D39AA2 /* Kanna in Frameworks */,
-				DAEDC32A2C98B11200D39AA2 /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,8 +67,8 @@
 				DA3B5E262C8C1BC600712D69 /* ContentView.swift */,
 				DA3B5E282C8C1BC600712D69 /* Item.swift */,
 				DA3B5E342C8C5E2100712D69 /* AddItemView.swift */,
-				DA3B5E362C8C6DC600712D69 /* CDPlayerView.swift */,
 				DAEDC3232C989FA100D39AA2 /* Scraper.swift */,
+				DA35A22A2C9BA2C800AD2456 /* MusicPlayer.swift */,
 				DA3B5E2A2C8C1BC800712D69 /* Assets.xcassets */,
 				DA3B5E2C2C8C1BC800712D69 /* Preview Content */,
 			);
@@ -102,7 +100,6 @@
 			);
 			name = "To Listen List";
 			packageProductDependencies = (
-				DAEDC3292C98B11200D39AA2 /* SwiftSoup */,
 				DAEDC32C2C9911F900D39AA2 /* Kanna */,
 			);
 			productName = "To Listen List";
@@ -134,7 +131,6 @@
 			);
 			mainGroup = DA3B5E182C8C1BC600712D69;
 			packageReferences = (
-				DAEDC3282C98B11200D39AA2 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
 				DAEDC32B2C9911F900D39AA2 /* XCRemoteSwiftPackageReference "Kanna" */,
 			);
 			productRefGroup = DA3B5E222C8C1BC600712D69 /* Products */;
@@ -164,9 +160,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA3B5E272C8C1BC600712D69 /* ContentView.swift in Sources */,
-				DA3B5E372C8C6DC600712D69 /* CDPlayerView.swift in Sources */,
 				DAEDC3242C989FA100D39AA2 /* Scraper.swift in Sources */,
 				DA3B5E292C8C1BC600712D69 /* Item.swift in Sources */,
+				DA35A22B2C9BA2C800AD2456 /* MusicPlayer.swift in Sources */,
 				DA3B5E252C8C1BC600712D69 /* To_Listen_ListApp.swift in Sources */,
 				DA3B5E352C8C5E2100712D69 /* AddItemView.swift in Sources */,
 			);
@@ -378,14 +374,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DAEDC3282C98B11200D39AA2 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/scinfu/SwiftSoup.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.7.5;
-			};
-		};
 		DAEDC32B2C9911F900D39AA2 /* XCRemoteSwiftPackageReference "Kanna" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/tid-kijyun/Kanna.git";
@@ -397,11 +385,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		DAEDC3292C98B11200D39AA2 /* SwiftSoup */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DAEDC3282C98B11200D39AA2 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
-			productName = SwiftSoup;
-		};
 		DAEDC32C2C9911F900D39AA2 /* Kanna */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DAEDC32B2C9911F900D39AA2 /* XCRemoteSwiftPackageReference "Kanna" */;

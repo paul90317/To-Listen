@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import AVFAudio
 
 @main
 struct To_Listen_ListApp: App {
@@ -28,5 +29,9 @@ struct To_Listen_ListApp: App {
             ContentView()
         }
         .modelContainer(sharedModelContainer)
+    }
+    
+    init () {
+        try! AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
     }
 }
