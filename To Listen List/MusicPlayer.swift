@@ -82,7 +82,7 @@ struct MusicPlayer: View {
         .onAppear {
             musicPlayer.setupRemoteTransportControls()
             musicPlayer.setupSongList(songList: songList)
-            musicPlayer.playTrack(trackId: 0)
+            musicPlayer.playTrack(trackId: firstTrackId)
             print("appear")
         }
         .onDisappear {
