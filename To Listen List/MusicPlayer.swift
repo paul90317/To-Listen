@@ -81,24 +81,23 @@ struct MusicPlayer: View {
         }
         .onAppear {
             musicPlayer.setupRemoteTransportControls()
-            musicPlayer.setupSongList(songList: songList)
-            musicPlayer.playTrack(trackId: firstTrackId)
+            musicPlayer.startProgressTimer()
+            musicPlayer.setupSongList(songList: songList, trackId: firstTrackId)
             print("appear")
         }
         .onDisappear {
-            if musicPlayer.isPlaying {
-                musicPlayer.togglePlayPause()
-            }
+            musicPlayer.clearSongList()
+            musicPlayer.stopProgressTimer()
         }
     }
 }
 
 class MusicPlayerControl: ObservableObject {
-    private var songList: [Item]?
+    private var songList: [(Item, AVPlayerItem)] = []
     
     private var currentSongIndex = 0
     private var timer: Timer?
-    private var player: AVPlayer?
+    private var player: AVPlayer = AVPlayer()
     
     @Published var isPlaying = false
     @Published var currentSongTitle = ""
@@ -108,60 +107,87 @@ class MusicPlayerControl: ObservableObject {
     
     func playTrack(trackId: Int) {
         currentSongIndex = trackId
-        isPlaying = false
-        player?.pause()
-        updateNowPlayingInfo()
         playCurrentTrack()
     }
     
-    func setupSongList(songList: [Item]) {
-        self.songList = songList
+    func setupSongList(songList: [Item], trackId: Int) {
+        self.songList = []
+        Task {
+            for item in songList {
+                let playerItem = try await getPlayerItem(songItem: item)
+                self.songList.append((item, playerItem))
+            }
+            NotificationCenter.default.addObserver(self, selector: #selector(songDidFinishPlaying), name: .AVPlayerItemDidPlayToEndTime, object: nil)
+            playTrack(trackId: trackId)
+        }
+    }
+    
+    func clearSongList() {
+        songList = []
+        NotificationCenter.default.removeObserver(self, name: .AVPlayerItemDidPlayToEndTime, object: nil)
+        if isPlaying {
+            togglePlayPause()
+        }
+        player.replaceCurrentItem(with: nil)
+    }
+    
+    private func getPlayerItem(songItem: Item) async throws -> AVPlayerItem {
+        var fail = 0;
+        var playerItem: AVPlayerItem!
+        repeat {
+            print(fail)
+            var songLink: String!
+            if fail > 0 {
+                songLink = try await fetchStreamURL(videoId: songItem.videoId)
+            } else if let _sondLink = songItem.streamURL {
+                songLink = _sondLink
+            } else {
+                fail += 1
+                continue;
+            }
+        
+            guard let url = URL(string: songLink) else {
+                print("URL not valid")
+                fail += 1
+                continue
+            }
+            do {
+                let asset = AVAsset(url: url)
+                let duration = CMTimeGetSeconds(try await asset.load(.duration)) / 2
+                playerItem = AVPlayerItem(asset: asset)
+                playerItem.forwardPlaybackEndTime = CMTime(seconds: duration, preferredTimescale: 600)
+            } catch {
+                fail += 1
+                continue
+            }
+            break
+        } while fail == 1
+            
+        if fail >= 2 {
+            throw URLError(.badServerResponse)
+        }
+            
+        return playerItem
     }
     
     func playCurrentTrack() {
-        startProgressTimer()
-        Task {
-            guard let songList = songList else {
-                print("songList not exist")
-                return
-            }
-            let songId = songList[currentSongIndex].videoId
-            print(songId)
-            let sondLink = try await fetchStreamURL(videoId: songId)
-            guard let url = URL(string: sondLink) else {
-                print("URL not valid")
-                return
-            }
-            let asset = AVAsset(url: url)
-            print("bbb")
-            let duration = CMTimeGetSeconds(try await asset.load(.duration)) / 2
-            print("aaa")
-            let playerItem = AVPlayerItem(asset: asset)
-            playerItem.forwardPlaybackEndTime = CMTime(seconds: duration, preferredTimescale: 600)
-            
-            isPlaying = true
-            currentSongTitle = try await fetchTitle(videoId: songId)
-            currentSongImage = try await fetchImage(videoId: songId)
-            currentSongAuthor = try await fetchAuthor(videoId: songId)
-            
-            player = AVPlayer(playerItem: playerItem)
-            player?.play()
-
-            // 當播放完畢時，播放下一首
-            NotificationCenter.default.addObserver(self, selector: #selector(songDidFinishPlaying), name: .AVPlayerItemDidPlayToEndTime, object: playerItem)
-        }
+        let (songItem, playerItem) = songList[currentSongIndex]
+        isPlaying = true
+        currentSongTitle = songItem.title
+        currentSongImage = songItem.image
+        currentSongAuthor = songItem.artist
+        player.seek(to: .zero)
+        player.replaceCurrentItem(with: playerItem)
+        player.play()
     }
 
     func togglePlayPause() {
         if isPlaying {
-            player?.pause()
-            stopProgressTimer()
+            player.pause()
         } else {
-            player?.play()
-            startProgressTimer()
+            player.play()
         }
         isPlaying.toggle()
-        updateNowPlayingInfo()
     }
 
     @objc func songDidFinishPlaying() {
@@ -170,18 +196,10 @@ class MusicPlayerControl: ObservableObject {
     }
 
     func playPreviousTrack() {
-        guard let songList = songList else {
-            print("songList not exist")
-            return
-        }
         playTrack(trackId: (currentSongIndex - 1 + songList.count) % songList.count)
     }
 
     func playNextTrack() {
-        guard let songList = songList else {
-            print("songList not exist")
-            return
-        }
         playTrack(trackId: (currentSongIndex + 1) % songList.count)
     }
 
@@ -191,8 +209,8 @@ class MusicPlayerControl: ObservableObject {
 
         // 設置播放/暫停控制
         commandCenter.playCommand.isEnabled = true
-        commandCenter.playCommand.addTarget { [unowned self] event in
-            if !self.isPlaying {
+        commandCenter.playCommand.addTarget { [weak self] event in
+            if let self = self, self.isPlaying {
                 self.togglePlayPause()
             }
             return .success
@@ -235,7 +253,7 @@ class MusicPlayerControl: ObservableObject {
     }
 
     func updateNowPlayingInfo() {
-        guard let player = player, let currentItem = player.currentItem else {
+        guard let currentItem = player.currentItem else {
             return
         }
         
@@ -264,13 +282,13 @@ class MusicPlayerControl: ObservableObject {
     }
 
     func startProgressTimer() {
-        stopProgressTimer()  // 確保不會有多餘的 timer
-
-        timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { [weak self] _ in
-            guard let self = self else {
-                return
+        if timer == nil {
+            timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { [weak self] _ in
+                guard let self = self else {
+                    return
+                }
+                self.updateNowPlayingInfo()  // 確保進度在 Now Playing Info 中更新
             }
-            self.updateNowPlayingInfo()  // 確保進度在 Now Playing Info 中更新
         }
     }
 
@@ -281,7 +299,7 @@ class MusicPlayerControl: ObservableObject {
 
     // 當使用者拖動進度條時呼叫，或者通過遠端控制調整進度
     func seekToProgress(_ progress: Double) {
-        guard let player = player, let currentItem = player.currentItem else { return }
+        guard let currentItem = player.currentItem else { return }
 
         let duration = currentItem.forwardPlaybackEndTime.seconds
         let newTime = CMTime(seconds: duration * progress, preferredTimescale: 600)
@@ -290,8 +308,6 @@ class MusicPlayerControl: ObservableObject {
 
     // 用於 MPRemoteCommandCenter 的播放進度控制
     func seekToTime(_ time: TimeInterval) {
-        guard let player = player else { return }
-
         let newTime = CMTime(seconds: time, preferredTimescale: 600)
         player.seek(to: newTime)
     }

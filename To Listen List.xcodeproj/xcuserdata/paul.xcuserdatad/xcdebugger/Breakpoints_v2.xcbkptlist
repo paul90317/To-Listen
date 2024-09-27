@@ -731,7 +731,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "C32D4DC5-7037-488E-9BF8-DDF0EB0B76BE"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "To Listen List/ContentView.swift"
@@ -741,6 +741,38 @@
             endingLineNumber = "16"
             landmarkName = "body"
             landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "C32D4DC5-7037-488E-9BF8-DDF0EB0B76BE - 452593ccc11790a7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "To_Listen_List.ContentView.body.getter : some"
+                  moduleName = "To Listen List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paul/Desktop/To%20Listen%20List/To%20Listen%20List/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "178">
+               </Location>
+               <Location
+                  uuid = "C32D4DC5-7037-488E-9BF8-DDF0EB0B76BE - 33c7296e88d7ed23"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.sheet&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, onDismiss: Swift.Optional&lt;() -&gt; ()&gt;, content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in To_Listen_List.ContentView.body.getter : some"
+                  moduleName = "To Listen List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/paul/Desktop/To%20Listen%20List/To%20Listen%20List/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "311">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
