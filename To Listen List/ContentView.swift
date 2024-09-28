@@ -9,8 +9,11 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
+    @Query(sort: \Item.order) private var diskItems: [Item]
+    @Environment(\.scenePhase) private var scenePhase
     @Environment(\.modelContext) private var modelContext
-    @Query(sort: \Item.order) private var items: [Item]
+    
+    @State private var items: [Item] = []
     @State private var addShow = false
     @State private var clear = false
     var body: some View {
@@ -18,7 +21,7 @@ struct ContentView: View {
             List {
                 ForEach(Array(items.enumerated()), id:\.offset) { index, item in
                     NavigationLink {
-                        MusicPlayer(trackId: index)
+                        MusicPlayer(items: $items, trackId: index)
                     } label: {
                         HStack {
                             if let image = UIImage(data: item.image) {
@@ -27,7 +30,6 @@ struct ContentView: View {
                                     .scaledToFit()
                                     .frame(width: 80, height: 45)
                             }
-                            
                             
                             VStack(alignment: .leading) {
                                 Text(item.title)
@@ -64,39 +66,57 @@ struct ContentView: View {
                 }
             }
             .sheet(isPresented: $addShow) {
-                AddItemView()
+                ItemAdder(items: $items)
                     .presentationDetents([.medium])
             }
             .confirmationDialog("Clear all songs?", isPresented: $clear) {
                 Button("Confirm") {
                     withAnimation {
-                        for item in items {
-                            modelContext.delete(item)
-                        }
+                        items = []
                     }
                 }
             } message: {
                 Text("Are you sure you want to clear all songs? This action cannot be undone.")
+            }
+            .onAppear {
+                items = diskItems
+                for item in items {
+                    print(item.order, item.title)
+                }
+                
+            }
+            .onChange(of: scenePhase) { newScenePhase in
+                if newScenePhase == .inactive {
+                    saveItemsToDisk()
+                }
             }
         }
     }
     
     private func moveItems(from source: IndexSet, to destination: Int) {
         withAnimation {
-            var reorderedItems = items
-            reorderedItems.move(fromOffsets: source, toOffset: destination)
-            for (i,item) in reorderedItems.enumerated() {
-                item.order = i;
-            }
+            items.move(fromOffsets: source, toOffset: destination)
+        }
+    }
+    
+    private func saveItemsToDisk() {
+        for diskItem in diskItems {
+            modelContext.delete(diskItem)
+        }
+        try! modelContext.save()
+        
+        for (i, item) in items.enumerated() {
+            item.order = i
+            modelContext.insert(item)
         }
         
+        try! modelContext.save()
+        print("saved")
     }
 
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
+            items.remove(atOffsets: offsets)
         }
     }
 }

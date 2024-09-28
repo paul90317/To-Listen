@@ -5,11 +5,12 @@ import MediaPlayer
 
 
 struct MusicPlayer: View {
-    @Query(sort: \Item.order) private var songList: [Item]
+    @Binding public var items: [Item]
     @StateObject private var musicPlayer = MusicPlayerControl()
     public let firstTrackId :Int
     
-    init (trackId: Int) {
+    init (items: Binding<[Item]>, trackId: Int) {
+        self._items = items
         firstTrackId = trackId
     }
     
@@ -23,7 +24,6 @@ struct MusicPlayer: View {
                     .cornerRadius(10)
                     .padding(.top, 20)
             }
-            
 
             VStack(alignment: .leading) {
                 Text(musicPlayer.currentSongTitle)
@@ -82,7 +82,7 @@ struct MusicPlayer: View {
         .onAppear {
             musicPlayer.setupRemoteTransportControls()
             musicPlayer.startProgressTimer()
-            musicPlayer.setupSongList(items: songList, trackId: firstTrackId)
+            musicPlayer.setupSongList(items: items, trackId: firstTrackId)
             print("appear")
         }
         .onDisappear {
