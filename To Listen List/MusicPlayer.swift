@@ -139,6 +139,7 @@ class MusicPlayerControl: ObservableObject {
             var songLink: String!
             if fail > 0 {
                 songLink = try await fetchStreamURL(videoId: songItem.videoId)
+                songItem.streamURL = songLink 
             } else if let _sondLink = songItem.streamURL {
                 songLink = _sondLink
             } else {

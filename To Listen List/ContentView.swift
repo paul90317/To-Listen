@@ -47,6 +47,17 @@ struct ContentView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        withAnimation {
+                            for item in items {
+                                modelContext.delete(item)
+                            }
+                        }
+                    }) {
+                        Text("Clear")
+                    }
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
                     EditButton()
                 }
                 ToolbarItem {

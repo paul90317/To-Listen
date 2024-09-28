@@ -47,36 +47,46 @@ struct AddItemView: View {
                     queue: .main
                 ){notification in
                     print("hihi")
-                    let videoId = notification.userInfo!["videoId"] as! String
-                    let title = notification.userInfo!["title"] as! String
-                    let image = notification.userInfo!["image"] as! Data
-                    let author = notification.userInfo!["author"] as! String
-                    if let last = items.last {
-                        let newItem = Item(order: last.order + 1, videoId: videoId, title: title, image: image, author: author)
-                        modelContext.insert(newItem)
-                    } else {
-                        let newItem = Item(order: 0, videoId: videoId, title: title, image: image, author: author)
-                        modelContext.insert(newItem)
+                    let userInfos = notification.userInfo!["userInfos"] as! [[String: Any]]
+                    for userInfo in userInfos {
+                        let videoId = userInfo["videoId"] as! String
+                        let title = userInfo["title"] as! String
+                        let image = userInfo["image"] as! Data
+                        let author = userInfo["author"] as! String
+                        if let last = items.last {
+                            let newItem = Item(order: last.order + 1, videoId: videoId, title: title, image: image, author: author)
+                            modelContext.insert(newItem)
+                        } else {
+                            let newItem = Item(order: 0, videoId: videoId, title: title, image: image, author: author)
+                            modelContext.insert(newItem)
+                        }
                     }
+                    
                     dismiss()
                 })
             }
         }
     }
-
-    private func addItem(videoId: String) {
-        Task {
+    
+    private func importPlaylist(playlistId: String) async throws {
+        let playlist = try await fetchPlaylist(playlistId: playlistId)
+        try await addItems(videoIds: playlist)
+    }
+    
+    private func addItems(videoIds: [String]) async throws {
+        var userInfos: [Any] = []
+        for videoId in videoIds {
             let userInfo: [String: Any] = [
                 "image": try await fetchImage(videoId: videoId),
                 "title": try await fetchTitle(videoId: videoId),
                 "videoId": videoId,
                 "author": try await fetchAuthor(videoId: videoId)
             ]
-            print("haha")
-            NotificationCenter.default.post(name: AddItemView.addItemEvent, object: nil, userInfo: userInfo)
-            
+            userInfos.append(userInfo)
         }
+        NotificationCenter.default.post(name: AddItemView.addItemEvent, object: nil, userInfo: ["userInfos": userInfos])
     }
+    
     private func addItem() {
         guard let url = URL(string: link), let components = URLComponents(url: url, resolvingAgainstBaseURL: false), let queryItems = components.queryItems else {
             print("unvalid URL")
@@ -84,10 +94,19 @@ struct AddItemView: View {
             return;
         }
         if url.host == "youtu.be" {
-            addItem(videoId: String(url.path.dropFirst()))
+            Task {
+                try await addItems(videoIds: [String(url.path.dropFirst())])
+            }
         }
         else if url.path == "/watch", let videoId = queryItems.first(where: { $0.name == "v" })?.value {
-            addItem(videoId: videoId)
+            Task {
+                try await addItems(videoIds: [videoId])
+            }
+        }
+        else if url.path == "/playlist", let playlistId = queryItems.first(where: { $0.name == "list" })?.value {
+            Task {
+                try await importPlaylist(playlistId: playlistId)
+            }
         }
     }
     
