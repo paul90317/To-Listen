@@ -14,21 +14,28 @@ struct AddItemView: View {
     @Query(sort: \Item.order) private var items: [Item]
     @State var link = ""
     @State private var notificationHandlers: [NSObjectProtocol] = []
+    @State var adding: Bool = false
     static let addItemEvent = Notification.Name("addItemEvent")
     var body: some View {
         NavigationView {
             List {
-                TextField("Link", text: $link)
+                if adding {
+                    Text(link)
+                } else {
+                    TextField("Link", text: $link)
+                }
             }
             .toolbar{
-                ToolbarItem {
-                    Button(action: paste) {
-                        Label("Paste", systemImage: "doc.on.clipboard")
+                if !adding {
+                    ToolbarItem {
+                        Button(action: paste) {
+                            Label("Paste", systemImage: "doc.on.clipboard")
+                        }
                     }
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                    ToolbarItem {
+                        Button(action: addItem) {
+                            Label("Add Item", systemImage: "plus")
+                        }
                     }
                 }
             }
@@ -41,6 +48,7 @@ struct AddItemView: View {
             }
             .onAppear {
                 print("hihi 0")
+                adding = false
                 notificationHandlers.append(NotificationCenter.default.addObserver(
                     forName: AddItemView.addItemEvent,
                     object: nil,
@@ -88,6 +96,7 @@ struct AddItemView: View {
     }
     
     private func addItem() {
+        adding = true
         guard let url = URL(string: link), let components = URLComponents(url: url, resolvingAgainstBaseURL: false), let queryItems = components.queryItems else {
             print("unvalid URL")
             dismiss()
@@ -95,17 +104,29 @@ struct AddItemView: View {
         }
         if url.host == "youtu.be" {
             Task {
-                try await addItems(videoIds: [String(url.path.dropFirst())])
+                do {
+                    try await addItems(videoIds: [String(url.path.dropFirst())])
+                } catch {
+                    dismiss()
+                }
             }
         }
         else if url.path == "/watch", let videoId = queryItems.first(where: { $0.name == "v" })?.value {
             Task {
-                try await addItems(videoIds: [videoId])
+                do {
+                    try await addItems(videoIds: [videoId])
+                } catch {
+                    dismiss()
+                }
             }
         }
         else if url.path == "/playlist", let playlistId = queryItems.first(where: { $0.name == "list" })?.value {
             Task {
-                try await importPlaylist(playlistId: playlistId)
+                do {
+                    try await importPlaylist(playlistId: playlistId)
+                } catch {
+                    dismiss()
+                }
             }
         }
     }

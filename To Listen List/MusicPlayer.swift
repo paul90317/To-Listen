@@ -118,7 +118,7 @@ class MusicPlayerControl: ObservableObject {
             songList.append((items[trackId], playerItem))
             playTrack(trackId: 0)
             
-            var i = trackId + 1
+            var i = (trackId + 1) % items.count
             while i != trackId {
                 let playerItem = try await getPlayerItem(songItem: items[i])
                 songList.append((items[i], playerItem))
