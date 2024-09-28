@@ -82,7 +82,7 @@ struct MusicPlayer: View {
         .onAppear {
             musicPlayer.setupRemoteTransportControls()
             musicPlayer.startProgressTimer()
-            musicPlayer.setupSongList(songList: songList, trackId: firstTrackId)
+            musicPlayer.setupSongList(items: songList, trackId: firstTrackId)
             print("appear")
         }
         .onDisappear {
@@ -110,15 +110,20 @@ class MusicPlayerControl: ObservableObject {
         playCurrentTrack()
     }
     
-    func setupSongList(songList: [Item], trackId: Int) {
-        self.songList = []
+    func setupSongList(items: [Item], trackId: Int) {
+        NotificationCenter.default.addObserver(self, selector: #selector(songDidFinishPlaying), name: .AVPlayerItemDidPlayToEndTime, object: nil)
+        songList = []
         Task {
-            for item in songList {
-                let playerItem = try await getPlayerItem(songItem: item)
-                self.songList.append((item, playerItem))
+            let playerItem = try await getPlayerItem(songItem: items[trackId])
+            songList.append((items[trackId], playerItem))
+            playTrack(trackId: 0)
+            
+            var i = trackId + 1
+            while i != trackId {
+                let playerItem = try await getPlayerItem(songItem: items[i])
+                songList.append((items[i], playerItem))
+                i = (i + 1) % items.count
             }
-            NotificationCenter.default.addObserver(self, selector: #selector(songDidFinishPlaying), name: .AVPlayerItemDidPlayToEndTime, object: nil)
-            playTrack(trackId: trackId)
         }
     }
     
