@@ -12,6 +12,7 @@ struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @Query(sort: \Item.order) private var items: [Item]
     @State private var addShow = false
+    @State private var clear = false
     var body: some View {
         NavigationView {
             List {
@@ -48,11 +49,7 @@ struct ContentView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
-                        withAnimation {
-                            for item in items {
-                                modelContext.delete(item)
-                            }
-                        }
+                        clear = true
                     }) {
                         Text("Clear")
                     }
@@ -66,10 +63,21 @@ struct ContentView: View {
                     }
                 }
             }
-            .sheet(isPresented: $addShow, content: {
+            .sheet(isPresented: $addShow) {
                 AddItemView()
                     .presentationDetents([.medium])
-            })
+            }
+            .confirmationDialog("Clear all songs?", isPresented: $clear) {
+                Button("Confirm") {
+                    withAnimation {
+                        for item in items {
+                            modelContext.delete(item)
+                        }
+                    }
+                }
+            } message: {
+                Text("Are you sure you want to clear all songs? This action cannot be undone.")
+            }
         }
     }
     
