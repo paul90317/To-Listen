@@ -216,7 +216,7 @@ class MusicPlayerControl: ObservableObject {
         // 設置播放/暫停控制
         commandCenter.playCommand.isEnabled = true
         commandCenter.playCommand.addTarget { [weak self] event in
-            if let self = self, self.isPlaying {
+            if let self = self, !self.isPlaying {
                 self.togglePlayPause()
             }
             return .success
